@@ -1,0 +1,35 @@
+name: Playwright tests
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm ci
+      - run: npx playwright install --with-deps
+      - run: npx playwright test
+
+      # Runs even when tests fail, so failures reach Jira.
+      - name: Triage failures to Jira
+        if: ${{ !cancelled() }}
+        uses: deepakdeakin/playwright-jira-triage@v0
+        with:
+          jira-base-url: ${{ secrets.JIRA_BASE_URL }}
+          jira-email: ${{ secrets.JIRA_EMAIL }}
+          jira-api-token: ${{ secrets.JIRA_API_TOKEN }}
+          project-key: QA
+          # Only file tickets from main; on pull requests, just preview in the job summary.
+          dry-run: ${{ github.event_name == 'pull_request' }}
+
+      - uses: actions/upload-artifact@v4
+        if: ${{ !cancelled() }}
+        with:
+          name: playwright-report
+          path: playwright-report/

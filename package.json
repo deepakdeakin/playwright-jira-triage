@@ -1,0 +1,12 @@
+{
+  "name": "playwright-jira-triage",
+  "version": "0.1.0",
+  "description": "GitHub Action: turn Playwright failures into one deduplicated Jira bug each.",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "node --test test/*.test.js"
+  },
+  "engines": { "node": ">=20" },
+  "license": "MIT"
+}

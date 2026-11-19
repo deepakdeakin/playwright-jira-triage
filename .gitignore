@@ -1,0 +1,3 @@
+node_modules/
+test/fixture-project/test-results/
+.DS_Store

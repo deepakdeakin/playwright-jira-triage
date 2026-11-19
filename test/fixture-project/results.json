@@ -1,0 +1,666 @@
+{
+  "config": {
+    "configFile": "test/fixture-project/playwright.config.js",
+    "rootDir": "test/fixture-project/tests",
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 2
+    },
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "json",
+        {
+          "outputFile": "results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "test/fixture-project/test-results",
+        "repeatEach": 1,
+        "retries": 1,
+        "metadata": {
+          "actualWorkers": 2
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "test/fixture-project/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "test/fixture-project/test-results",
+        "repeatEach": 1,
+        "retries": 1,
+        "metadata": {
+          "actualWorkers": 2
+        },
+        "id": "firefox",
+        "name": "firefox",
+        "testDir": "test/fixture-project/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "shard": null,
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.56.1",
+    "workers": 6,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "checkout.spec.js",
+      "file": "checkout.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "loads product API",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 7,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 5,
+                  "error": {
+                    "message": "TypeError: fetch failed",
+                    "stack": "TypeError: fetch failed",
+                    "cause": {
+                      "message": "Error: connect ECONNREFUSED 127.0.0.1:65530",
+                      "stack": "Error: connect ECONNREFUSED 127.0.0.1:65530"
+                    }
+                  },
+                  "errors": [
+                    {
+                      "message": "TypeError: fetch failed\n[cause]: Error: connect ECONNREFUSED 127.0.0.1:65530"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-19T10:43:44.242Z",
+                  "annotations": [],
+                  "attachments": []
+                },
+                {
+                  "workerIndex": 8,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 5,
+                  "error": {
+                    "message": "TypeError: fetch failed",
+                    "stack": "TypeError: fetch failed",
+                    "cause": {
+                      "message": "Error: connect ECONNREFUSED 127.0.0.1:65530",
+                      "stack": "Error: connect ECONNREFUSED 127.0.0.1:65530"
+                    }
+                  },
+                  "errors": [
+                    {
+                      "message": "TypeError: fetch failed\n[cause]: Error: connect ECONNREFUSED 127.0.0.1:65530"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 1,
+                  "startTime": "2026-11-19T10:43:44.570Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "24e4b3ac21f7f473b7e5-7a28c17802fe11df5e94",
+          "file": "checkout.spec.js",
+          "line": 26,
+          "column": 1
+        },
+        {
+          "title": "loads product API",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 1,
+                  "status": "failed",
+                  "duration": 4,
+                  "error": {
+                    "message": "TypeError: fetch failed",
+                    "stack": "TypeError: fetch failed",
+                    "cause": {
+                      "message": "Error: connect ECONNREFUSED 127.0.0.1:65530",
+                      "stack": "Error: connect ECONNREFUSED 127.0.0.1:65530"
+                    }
+                  },
+                  "errors": [
+                    {
+                      "message": "TypeError: fetch failed\n[cause]: Error: connect ECONNREFUSED 127.0.0.1:65530"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-19T10:43:44.243Z",
+                  "annotations": [],
+                  "attachments": []
+                },
+                {
+                  "workerIndex": 9,
+                  "parallelIndex": 1,
+                  "status": "failed",
+                  "duration": 5,
+                  "error": {
+                    "message": "TypeError: fetch failed",
+                    "stack": "TypeError: fetch failed",
+                    "cause": {
+                      "message": "Error: connect ECONNREFUSED 127.0.0.1:65530",
+                      "stack": "Error: connect ECONNREFUSED 127.0.0.1:65530"
+                    }
+                  },
+                  "errors": [
+                    {
+                      "message": "TypeError: fetch failed\n[cause]: Error: connect ECONNREFUSED 127.0.0.1:65530"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 1,
+                  "startTime": "2026-11-19T10:43:44.570Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "24e4b3ac21f7f473b7e5-de2b872c1a2f7529065b",
+          "file": "checkout.spec.js",
+          "line": 26,
+          "column": 1
+        }
+      ],
+      "suites": [
+        {
+          "title": "Checkout",
+          "file": "checkout.spec.js",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "adds item to cart",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 2,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-19T10:43:43.213Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "24e4b3ac21f7f473b7e5-e9a928df1f257da70eb8",
+              "file": "checkout.spec.js",
+              "line": 4,
+              "column": 3
+            },
+            {
+              "title": "applies discount code",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 3,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 1\u001b[39m\n\n\u001b[2m  Object {\u001b[22m\n\u001b[32m-   \"total\": 85,\u001b[39m\n\u001b[31m+   \"total\": 90,\u001b[39m\n\u001b[2m  }\u001b[22m",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 1\u001b[39m\n\n\u001b[2m  Object {\u001b[22m\n\u001b[32m-   \"total\": 85,\u001b[39m\n\u001b[31m+   \"total\": 90,\u001b[39m\n\u001b[2m  }\u001b[22m\n    at test/fixture-project/tests/checkout.spec.js:14:44",
+                        "location": {
+                          "file": "test/fixture-project/tests/checkout.spec.js",
+                          "column": 44,
+                          "line": 14
+                        },
+                        "snippet": "  12 |     writeFileSync(shot, Buffer.from(\"89504e470d0a1a0a0000000d49484452000000010000000108060000001f15c4890000000d4944415478da6364f8ff1f0003030200ef9e2b6e0000000049454e44ae426082\", \"hex\"));\n  13 |     await testInfo.attach(\"screenshot\", { path: shot, contentType: \"image/png\" });\n> 14 |     expect({ total: 90 + testInfo.retry }).toEqual({ total: 85 });\n     |                                            ^\n  15 |   });\n  16 |\n  17 |   test(\"shows order confirmation\", async ({}, testInfo) => {"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "test/fixture-project/tests/checkout.spec.js",
+                            "column": 44,
+                            "line": 14
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 1\u001b[39m\n\n\u001b[2m  Object {\u001b[22m\n\u001b[32m-   \"total\": 85,\u001b[39m\n\u001b[31m+   \"total\": 90,\u001b[39m\n\u001b[2m  }\u001b[22m\n\n  12 |     writeFileSync(shot, Buffer.from(\"89504e470d0a1a0a0000000d49484452000000010000000108060000001f15c4890000000d4944415478da6364f8ff1f0003030200ef9e2b6e0000000049454e44ae426082\", \"hex\"));\n  13 |     await testInfo.attach(\"screenshot\", { path: shot, contentType: \"image/png\" });\n> 14 |     expect({ total: 90 + testInfo.retry }).toEqual({ total: 85 });\n     |                                            ^\n  15 |   });\n  16 |\n  17 |   test(\"shows order confirmation\", async ({}, testInfo) => {\n    at test/fixture-project/tests/checkout.spec.js:14:44"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-19T10:43:43.225Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "test/fixture-project/attachments/attachments-screenshot-09f3672d8f1862474eeab54124df9a471f26ccb0.png"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "test/fixture-project/tests/checkout.spec.js",
+                        "column": 44,
+                        "line": 14
+                      }
+                    },
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 5,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 1\u001b[39m\n\n\u001b[2m  Object {\u001b[22m\n\u001b[32m-   \"total\": 85,\u001b[39m\n\u001b[31m+   \"total\": 91,\u001b[39m\n\u001b[2m  }\u001b[22m",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 1\u001b[39m\n\n\u001b[2m  Object {\u001b[22m\n\u001b[32m-   \"total\": 85,\u001b[39m\n\u001b[31m+   \"total\": 91,\u001b[39m\n\u001b[2m  }\u001b[22m\n    at test/fixture-project/tests/checkout.spec.js:14:44",
+                        "location": {
+                          "file": "test/fixture-project/tests/checkout.spec.js",
+                          "column": 44,
+                          "line": 14
+                        },
+                        "snippet": "  12 |     writeFileSync(shot, Buffer.from(\"89504e470d0a1a0a0000000d49484452000000010000000108060000001f15c4890000000d4944415478da6364f8ff1f0003030200ef9e2b6e0000000049454e44ae426082\", \"hex\"));\n  13 |     await testInfo.attach(\"screenshot\", { path: shot, contentType: \"image/png\" });\n> 14 |     expect({ total: 90 + testInfo.retry }).toEqual({ total: 85 });\n     |                                            ^\n  15 |   });\n  16 |\n  17 |   test(\"shows order confirmation\", async ({}, testInfo) => {"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "test/fixture-project/tests/checkout.spec.js",
+                            "column": 44,
+                            "line": 14
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 1\u001b[39m\n\n\u001b[2m  Object {\u001b[22m\n\u001b[32m-   \"total\": 85,\u001b[39m\n\u001b[31m+   \"total\": 91,\u001b[39m\n\u001b[2m  }\u001b[22m\n\n  12 |     writeFileSync(shot, Buffer.from(\"89504e470d0a1a0a0000000d49484452000000010000000108060000001f15c4890000000d4944415478da6364f8ff1f0003030200ef9e2b6e0000000049454e44ae426082\", \"hex\"));\n  13 |     await testInfo.attach(\"screenshot\", { path: shot, contentType: \"image/png\" });\n> 14 |     expect({ total: 90 + testInfo.retry }).toEqual({ total: 85 });\n     |                                            ^\n  15 |   });\n  16 |\n  17 |   test(\"shows order confirmation\", async ({}, testInfo) => {\n    at test/fixture-project/tests/checkout.spec.js:14:44"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 1,
+                      "startTime": "2026-11-19T10:43:43.557Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "test/fixture-project/attachments/attachments-screenshot-73c96300b25b2eb1379d26684ae5c53ba40edc2b.png"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "test/fixture-project/tests/checkout.spec.js",
+                        "column": 44,
+                        "line": 14
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "24e4b3ac21f7f473b7e5-9ea702b3ca509eb66ae1",
+              "file": "checkout.spec.js",
+              "line": 7,
+              "column": 3
+            },
+            {
+              "title": "shows order confirmation",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 5,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 3,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: > \u001b[32m0\u001b[39m\nReceived:   \u001b[31m0\u001b[39m",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: > \u001b[32m0\u001b[39m\nReceived:   \u001b[31m0\u001b[39m\n    at test/fixture-project/tests/checkout.spec.js:19:28",
+                        "location": {
+                          "file": "test/fixture-project/tests/checkout.spec.js",
+                          "column": 28,
+                          "line": 19
+                        },
+                        "snippet": "  17 |   test(\"shows order confirmation\", async ({}, testInfo) => {\n  18 |     // Flaky: fails on the first attempt only.\n> 19 |     expect(testInfo.retry).toBeGreaterThan(0);\n     |                            ^\n  20 |   });\n  21 | });\n  22 |"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "test/fixture-project/tests/checkout.spec.js",
+                            "column": 28,
+                            "line": 19
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: > \u001b[32m0\u001b[39m\nReceived:   \u001b[31m0\u001b[39m\n\n  17 |   test(\"shows order confirmation\", async ({}, testInfo) => {\n  18 |     // Flaky: fails on the first attempt only.\n> 19 |     expect(testInfo.retry).toBeGreaterThan(0);\n     |                            ^\n  20 |   });\n  21 | });\n  22 |\n    at test/fixture-project/tests/checkout.spec.js:19:28"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-19T10:43:43.899Z",
+                      "annotations": [],
+                      "attachments": [],
+                      "errorLocation": {
+                        "file": "test/fixture-project/tests/checkout.spec.js",
+                        "column": 28,
+                        "line": 19
+                      }
+                    },
+                    {
+                      "workerIndex": 7,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 2,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 1,
+                      "startTime": "2026-11-19T10:43:44.232Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "flaky"
+                }
+              ],
+              "id": "24e4b3ac21f7f473b7e5-695dba48a7fe0c875d9a",
+              "file": "checkout.spec.js",
+              "line": 21,
+              "column": 3
+            },
+            {
+              "title": "adds item to cart",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 2,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-19T10:43:43.213Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "24e4b3ac21f7f473b7e5-b90364afb32ecd35a426",
+              "file": "checkout.spec.js",
+              "line": 4,
+              "column": 3
+            },
+            {
+              "title": "applies discount code",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "failed",
+                      "duration": 3,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 1\u001b[39m\n\n\u001b[2m  Object {\u001b[22m\n\u001b[32m-   \"total\": 85,\u001b[39m\n\u001b[31m+   \"total\": 90,\u001b[39m\n\u001b[2m  }\u001b[22m",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 1\u001b[39m\n\n\u001b[2m  Object {\u001b[22m\n\u001b[32m-   \"total\": 85,\u001b[39m\n\u001b[31m+   \"total\": 90,\u001b[39m\n\u001b[2m  }\u001b[22m\n    at test/fixture-project/tests/checkout.spec.js:14:44",
+                        "location": {
+                          "file": "test/fixture-project/tests/checkout.spec.js",
+                          "column": 44,
+                          "line": 14
+                        },
+                        "snippet": "  12 |     writeFileSync(shot, Buffer.from(\"89504e470d0a1a0a0000000d49484452000000010000000108060000001f15c4890000000d4944415478da6364f8ff1f0003030200ef9e2b6e0000000049454e44ae426082\", \"hex\"));\n  13 |     await testInfo.attach(\"screenshot\", { path: shot, contentType: \"image/png\" });\n> 14 |     expect({ total: 90 + testInfo.retry }).toEqual({ total: 85 });\n     |                                            ^\n  15 |   });\n  16 |\n  17 |   test(\"shows order confirmation\", async ({}, testInfo) => {"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "test/fixture-project/tests/checkout.spec.js",
+                            "column": 44,
+                            "line": 14
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 1\u001b[39m\n\n\u001b[2m  Object {\u001b[22m\n\u001b[32m-   \"total\": 85,\u001b[39m\n\u001b[31m+   \"total\": 90,\u001b[39m\n\u001b[2m  }\u001b[22m\n\n  12 |     writeFileSync(shot, Buffer.from(\"89504e470d0a1a0a0000000d49484452000000010000000108060000001f15c4890000000d4944415478da6364f8ff1f0003030200ef9e2b6e0000000049454e44ae426082\", \"hex\"));\n  13 |     await testInfo.attach(\"screenshot\", { path: shot, contentType: \"image/png\" });\n> 14 |     expect({ total: 90 + testInfo.retry }).toEqual({ total: 85 });\n     |                                            ^\n  15 |   });\n  16 |\n  17 |   test(\"shows order confirmation\", async ({}, testInfo) => {\n    at test/fixture-project/tests/checkout.spec.js:14:44"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-19T10:43:43.225Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "test/fixture-project/attachments/attachments-screenshot-34ea73d378be87dd605e2722e8b4c8b2bc6dafd2.png"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "test/fixture-project/tests/checkout.spec.js",
+                        "column": 44,
+                        "line": 14
+                      }
+                    },
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 1,
+                      "status": "failed",
+                      "duration": 5,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 1\u001b[39m\n\n\u001b[2m  Object {\u001b[22m\n\u001b[32m-   \"total\": 85,\u001b[39m\n\u001b[31m+   \"total\": 91,\u001b[39m\n\u001b[2m  }\u001b[22m",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 1\u001b[39m\n\n\u001b[2m  Object {\u001b[22m\n\u001b[32m-   \"total\": 85,\u001b[39m\n\u001b[31m+   \"total\": 91,\u001b[39m\n\u001b[2m  }\u001b[22m\n    at test/fixture-project/tests/checkout.spec.js:14:44",
+                        "location": {
+                          "file": "test/fixture-project/tests/checkout.spec.js",
+                          "column": 44,
+                          "line": 14
+                        },
+                        "snippet": "  12 |     writeFileSync(shot, Buffer.from(\"89504e470d0a1a0a0000000d49484452000000010000000108060000001f15c4890000000d4944415478da6364f8ff1f0003030200ef9e2b6e0000000049454e44ae426082\", \"hex\"));\n  13 |     await testInfo.attach(\"screenshot\", { path: shot, contentType: \"image/png\" });\n> 14 |     expect({ total: 90 + testInfo.retry }).toEqual({ total: 85 });\n     |                                            ^\n  15 |   });\n  16 |\n  17 |   test(\"shows order confirmation\", async ({}, testInfo) => {"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "test/fixture-project/tests/checkout.spec.js",
+                            "column": 44,
+                            "line": 14
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 1\u001b[39m\n\n\u001b[2m  Object {\u001b[22m\n\u001b[32m-   \"total\": 85,\u001b[39m\n\u001b[31m+   \"total\": 91,\u001b[39m\n\u001b[2m  }\u001b[22m\n\n  12 |     writeFileSync(shot, Buffer.from(\"89504e470d0a1a0a0000000d49484452000000010000000108060000001f15c4890000000d4944415478da6364f8ff1f0003030200ef9e2b6e0000000049454e44ae426082\", \"hex\"));\n  13 |     await testInfo.attach(\"screenshot\", { path: shot, contentType: \"image/png\" });\n> 14 |     expect({ total: 90 + testInfo.retry }).toEqual({ total: 85 });\n     |                                            ^\n  15 |   });\n  16 |\n  17 |   test(\"shows order confirmation\", async ({}, testInfo) => {\n    at test/fixture-project/tests/checkout.spec.js:14:44"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 1,
+                      "startTime": "2026-11-19T10:43:43.557Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "test/fixture-project/attachments/attachments-screenshot-ac3feabacd4d272807e842eb5f0cfee7e0027ee3.png"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "test/fixture-project/tests/checkout.spec.js",
+                        "column": 44,
+                        "line": 14
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "24e4b3ac21f7f473b7e5-3536f2f371bcd1fec367",
+              "file": "checkout.spec.js",
+              "line": 7,
+              "column": 3
+            },
+            {
+              "title": "shows order confirmation",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 1,
+                      "status": "failed",
+                      "duration": 3,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: > \u001b[32m0\u001b[39m\nReceived:   \u001b[31m0\u001b[39m",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: > \u001b[32m0\u001b[39m\nReceived:   \u001b[31m0\u001b[39m\n    at test/fixture-project/tests/checkout.spec.js:19:28",
+                        "location": {
+                          "file": "test/fixture-project/tests/checkout.spec.js",
+                          "column": 28,
+                          "line": 19
+                        },
+                        "snippet": "  17 |   test(\"shows order confirmation\", async ({}, testInfo) => {\n  18 |     // Flaky: fails on the first attempt only.\n> 19 |     expect(testInfo.retry).toBeGreaterThan(0);\n     |                            ^\n  20 |   });\n  21 | });\n  22 |"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "test/fixture-project/tests/checkout.spec.js",
+                            "column": 28,
+                            "line": 19
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: > \u001b[32m0\u001b[39m\nReceived:   \u001b[31m0\u001b[39m\n\n  17 |   test(\"shows order confirmation\", async ({}, testInfo) => {\n  18 |     // Flaky: fails on the first attempt only.\n> 19 |     expect(testInfo.retry).toBeGreaterThan(0);\n     |                            ^\n  20 |   });\n  21 | });\n  22 |\n    at test/fixture-project/tests/checkout.spec.js:19:28"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-19T10:43:43.898Z",
+                      "annotations": [],
+                      "attachments": [],
+                      "errorLocation": {
+                        "file": "test/fixture-project/tests/checkout.spec.js",
+                        "column": 28,
+                        "line": 19
+                      }
+                    },
+                    {
+                      "workerIndex": 6,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 2,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 1,
+                      "startTime": "2026-11-19T10:43:44.232Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "flaky"
+                }
+              ],
+              "id": "24e4b3ac21f7f473b7e5-d38255f7c54bd17b4705",
+              "file": "checkout.spec.js",
+              "line": 21,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-19T10:43:42.882Z",
+    "duration": 1712.136,
+    "expected": 2,
+    "skipped": 0,
+    "unexpected": 4,
+    "flaky": 2
+  }
+}

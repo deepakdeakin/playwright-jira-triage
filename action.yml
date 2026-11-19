@@ -1,0 +1,59 @@
+name: Playwright Jira Triage
+description: Turn Playwright test failures into one deduplicated Jira bug each. Repeat failures get a comment, not a new ticket.
+author: deepakdeakin
+branding:
+  icon: check-square
+  color: green
+
+inputs:
+  report-path:
+    description: Path to the Playwright JSON report (reporter "json", e.g. outputFile "test-results/results.json").
+    default: test-results/results.json
+  jira-base-url:
+    description: Your Jira Cloud URL, e.g. https://your-team.atlassian.net
+    required: false
+  jira-email:
+    description: Email of the Jira account that owns the API token.
+    required: false
+  jira-api-token:
+    description: Jira API token. Store it as a repository secret.
+    required: false
+  project-key:
+    description: Jira project key to file bugs in, e.g. QA
+    required: false
+  issue-type:
+    description: Issue type for new tickets.
+    default: Bug
+  labels:
+    description: Extra labels for new tickets, comma separated.
+    default: ""
+  flaky:
+    description: "What to do with tests that failed then passed on retry: ticket, comment-only or ignore."
+    default: ticket
+  attach:
+    description: "Which Playwright attachments to upload to new tickets: any of screenshot, trace, video, or none."
+    default: screenshot,trace
+  max-new-issues:
+    description: Safety cap on new tickets per run. Extra failures are listed in the job summary instead.
+    default: "10"
+  mass-failure-threshold:
+    description: If at least this share of tests fail with the same error, treat it as one CI environment problem.
+    default: "0.5"
+  dry-run:
+    description: Print what would be filed without calling Jira.
+    default: "false"
+  fail-on-error:
+    description: Fail this step if Jira cannot be reached. Off by default so triage never blocks your pipeline.
+    default: "false"
+
+outputs:
+  created:
+    description: Keys of tickets created in this run, comma separated.
+  commented:
+    description: Keys of existing tickets that got a repeat-failure comment.
+  failures:
+    description: Number of distinct failures found in the report.
+
+runs:
+  using: node24
+  main: index.js
